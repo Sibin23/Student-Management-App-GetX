@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:student_management_getx/model/student_model.dart';
-import 'package:student_management_getx/view/widgets_common/delete_dialogues.dart';
+import 'package:student_management_getx/view/widgets/delete_dialogues.dart';
 
 import '../data_base_helper/data_base_helper.dart';
 import '../view/edit_student/edit_student.dart';
 
 class StudentDetailsController extends GetxController {
-  
-  //AddStudentController data = Get.find();
   late DatabaseHelper db;
 
   @override

@@ -22,7 +22,7 @@ Widget textField2(
     maxLines: maxLines,
     keyboardType: keyboardType,
     style: TextStyle(
-      color: Tcolo.black,
+      color: Tcolors.black,
     ),
     decoration: InputDecoration(
       border: OutlineInputBorder(

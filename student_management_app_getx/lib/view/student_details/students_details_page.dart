@@ -17,12 +17,11 @@ class StudentDetailspage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Student Profile', style: titletxt),
+        title:  Text('Student Profile', style: titletxt),
         actions: [
           IconButton(
             icon: const Icon(Icons.delete),
             onPressed: () {
-              //controller.deleteStudent(student);
               controller.showCustomDialog(student);
             },
           ),
@@ -33,9 +32,9 @@ class StudentDetailspage extends StatelessWidget {
             },
           ),
         ],
-        backgroundColor: Tcolo.primarycolor1,
+        backgroundColor: Tcolors.primarycolor1,
       ),
-      body: Column(
+      body: ListView(
         children: [
           kheight,
           Align(
@@ -46,9 +45,8 @@ class StudentDetailspage extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: FileImage(File(student.profilePicture)),
-                ),
+                    fit: BoxFit.cover,
+                    image: FileImage(File(student.profilePicture))),
               ),
             ),
           ),

@@ -11,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Tcolo.white, 
+      backgroundColor: Tcolors.white, 
       body: Center(
         child:GetBuilder<LoginController>(builder: (loginController){
           return  SizedBox(child: Image.asset('assets/logo_prev_ui.png'));

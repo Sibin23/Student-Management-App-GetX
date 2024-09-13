@@ -1,9 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 import 'package:get/get.dart';
-
 import '../../controllers/edit_student_controller.dart';
 import '../../controllers/home_page_controller.dart';
 import '../../core/colors.dart';
@@ -11,7 +9,7 @@ import '../../core/constants.dart';
 import '../../data_base_helper/data_base_helper.dart';
 import '../../model/student_model.dart';
 import '../home/screen_home.dart';
-import '../widgets_common/round_button.dart';
+import '../widgets/round_button.dart';
 
 class EditStudentScreen extends StatelessWidget {
   final EditStudentController controller = Get.put(EditStudentController());
@@ -27,8 +25,8 @@ class EditStudentScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(" Edit Students", style: titletxt),
-        backgroundColor: Tcolo.primarycolor1,
+        title:  Text(" Edit Students", style: titletxt),
+        backgroundColor: Tcolors.primarycolor1,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -123,7 +121,7 @@ class EditStudentScreen extends StatelessWidget {
                   ),
                   kheight20,
                   RoundButton(
-                    textColor: Tcolo.white,
+                    textColor: Tcolors.white,
                     title: 'Save',
                     onPressed: () {
                       _.formKey.currentState!.validate();
@@ -170,7 +168,7 @@ class EditStudentScreen extends StatelessWidget {
                         });
                       }
                     },
-                    buttonColor: Tcolo.primarycolor1,
+                    buttonColor: Tcolors.primarycolor1,
                   ),
                 ],
               ),

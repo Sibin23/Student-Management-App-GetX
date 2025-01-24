@@ -25,7 +25,20 @@ class EditStudentScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title:  Text(" Edit Students", style: titletxt),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                Tcolors.primarycolor1,
+                Tcolors.primarycolor2,
+                Tcolors.primarycolor3,
+                Tcolors.primarycolor4,
+              ])),
+        ),
+        foregroundColor: Tcolors.white,
+        title: Text(" Edit Students", style: titletxt),
         backgroundColor: Tcolors.primarycolor1,
       ),
       body: Padding(

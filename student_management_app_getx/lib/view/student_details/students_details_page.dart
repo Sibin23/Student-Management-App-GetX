@@ -17,7 +17,20 @@ class StudentDetailspage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:  Text('Student Profile', style: titletxt),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                Tcolors.primarycolor1,
+                Tcolors.primarycolor2,
+                Tcolors.primarycolor3,
+                Tcolors.primarycolor4,
+              ])),
+        ),
+        foregroundColor: Tcolors.white,
+        title: Text('Student Profile', style: titletxt),
         actions: [
           IconButton(
             icon: const Icon(Icons.delete),
@@ -26,7 +39,9 @@ class StudentDetailspage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.edit),
+            icon: const Icon(
+              Icons.edit,
+            ),
             onPressed: () {
               controller.editStudent(student);
             },
@@ -43,11 +58,18 @@ class StudentDetailspage extends StatelessWidget {
               width: 180,
               height: 180,
               decoration: BoxDecoration(
+                border: Border.all(color: Colors.black,width: 0.3),
                 shape: BoxShape.circle,
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: FileImage(File(student.profilePicture))),
               ),
+              child: student.profilePicture.isEmpty
+                  ? const Icon(
+                      Icons.person,
+                      size: 50,
+                    )
+                  : null,
             ),
           ),
           Padding(
@@ -59,22 +81,22 @@ class StudentDetailspage extends StatelessWidget {
                 children: [
                   kheight,
                   Text(
-                    'Name :   ${student.name}',
+                    'Name : ${student.name}',
                     style: contenttxt,
                   ),
                   kheight,
                   Text(
-                    'Schoolname :   ${student.schoolname}',
+                    'Schoolname : ${student.schoolname}',
                     style: contenttxt,
                   ),
                   kheight,
                   Text(
-                    'Fathername :    ${student.fathername}',
+                    'Father\'s name : ${student.fathername}',
                     style: contenttxt,
                   ),
                   kheight,
                   Text(
-                    'Age :                   ${student.age}',
+                    'Age : ${student.age}',
                     style: contenttxt,
                   ),
                   kheight,

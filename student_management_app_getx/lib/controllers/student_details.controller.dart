@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:student_management_getx/core/colors.dart';
 import 'package:student_management_getx/model/student_model.dart';
 import 'package:student_management_getx/view/widgets/delete_dialogues.dart';
 
@@ -18,16 +19,16 @@ class StudentDetailsController extends GetxController {
   void deleteStudent(Student student) {
     Get.defaultDialog(
       title: 'Delete Student',
-      content: const Text(
+      content:  Text(
         'Are you sure you want to delete this student?',
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Tcolors.black),
       ),
       contentPadding:
           const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       titlePadding: const EdgeInsets.only(top: 25, bottom: 10),
-      titleStyle: const TextStyle(color: Colors.white),
-      middleTextStyle: const TextStyle(color: Colors.white),
-      backgroundColor: const Color.fromARGB(255, 57, 57, 57),
+      titleStyle:  TextStyle(color: Tcolors.black),
+      middleTextStyle:  TextStyle(color: Tcolors.black),
+      backgroundColor: Tcolors.white,
       onConfirm: () {
         Get.snackbar(
           'Success',
@@ -46,7 +47,7 @@ class StudentDetailsController extends GetxController {
           snackPosition: SnackPosition.BOTTOM,
           duration: const Duration(seconds: 3),
           snackStyle: SnackStyle.FLOATING,
-          backgroundColor: Colors.black,
+          backgroundColor: Tcolors.primarycolor3,
           colorText: Colors.white,
           margin: const EdgeInsets.all(16),
           borderRadius: 8,
@@ -71,7 +72,7 @@ class StudentDetailsController extends GetxController {
     },onDelete: () {
       Get.snackbar(
           'Success',
-          'Student added successfully',
+          'Student Added successfully',
           messageText: const Text(
             'Student Deleted Successfully',
             style: TextStyle(color: Colors.white),
@@ -84,9 +85,9 @@ class StudentDetailsController extends GetxController {
                 fontSize: 17),
           ),
           snackPosition: SnackPosition.BOTTOM,
-          duration: const Duration(seconds: 3),
+          duration: const Duration(seconds: 2),
           snackStyle: SnackStyle.FLOATING,
-          backgroundColor: Colors.black,
+          backgroundColor: Tcolors.primarycolor3,
           colorText: Colors.white,
           margin: const EdgeInsets.all(16),
           borderRadius: 8,

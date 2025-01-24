@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:student_management_getx/core/colors.dart';
 import 'package:student_management_getx/model/student_model.dart';
 
 
@@ -73,7 +74,7 @@ class EditStudentController extends GetxController {
       snackPosition: SnackPosition.BOTTOM,
       duration: const Duration(seconds: 3),
       snackStyle: SnackStyle.FLOATING,
-      backgroundColor: Colors.black,
+      backgroundColor: Tcolors.grey,
       colorText: Colors.white,
       margin: const EdgeInsets.all(16),
       borderRadius: 8,

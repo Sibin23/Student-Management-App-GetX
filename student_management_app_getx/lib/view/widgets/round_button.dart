@@ -36,7 +36,7 @@ class RoundButton extends StatelessWidget {
                   Tcolors.primarycolor3,
                   Tcolors.primarycolor4,
                 ]),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                   color: Colors.grey,
                   spreadRadius: 2,
